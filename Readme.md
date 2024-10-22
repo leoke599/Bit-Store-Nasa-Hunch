@@ -40,3 +40,8 @@ Goals Roadmap:
 ## More information
 
 	Create a Data repository for NASA Hunch projects that makes collaboration easier, has version control, and has authentication for users to access their files. We can make a website that can do these things using PHP, HTML, Javascript, CSS, and MySQL. Using MySQL we can authenticate using a database using a username and password. Using PHP we can make the website dynamic to show what files are there, what has been uploaded, and when. We can make the website look different using JS, CSS, and HTML. We’ll use Raspberry Pi as a server to store information right now. We estimate the cost to be somewhere around 100$/unit.
+
+
+
+
+### python authentication/manage.py runserver

@@ -1,19 +1,35 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-from django.http import HttpResponse
+from . forms import CreateUserForm
 
 def homepage(request):
     
-    return HttpResponse("this is the homepage")
+    return render(request, 'testauth/index.html')
 
 def register(request):
+    form = CreateUserForm()
 
-    pass
+    if request.method == "POST":
+
+        form = CreateUserForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            return redirect('my-login')
+        
+    context = {'registerform':form}
+
+
+    return render(request, 'testauth/register.html', context=context)
 
 def my_login(request):
 
-    pass
+    return render(request, 'testauth/mylogin.html')
 
 def dashboard(request):
 
-    pass
+    return render(request, 'testauth/dashboard.html')
+
+def about(request):
+
+    return render(request, 'testauth/About.html')
