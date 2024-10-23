@@ -1,14 +1,30 @@
+{% load static %}
 <html>
-    <h1>register now</h1>
+	<head>
+		<meta charset="utf-8">
+		<title>Register</title>
+		<link href="../../static/testauth/css/auth.css" type="text/css" rel="stylesheet">
+		<link rel="icon" type="image/x-icon" href="../Assets/bitsore3.png"/>
+	</head>
+	<body>
+		<img class="logo" src="../../static/testauth/Assets/bitsore3.png" height="90px">
+		<div id="Register" class="Authbox">
+			<h2>Register to Bit-Store</h2>
+			<form action="Register.php" method="post">
+				<form method="POST" autocomplete="off">
 
-    <form method="POST" autocomplete="off">
-
-    {% csrf_token %}
-
-    {{registerform.as_p}}
-    <input type="submit" value="Register"/>
-    
-    </form>
+					{% csrf_token %}
+			
+					{{registerform.as_p}}
+					<input type="submit" value="Register"/>
+				
+				</form>
+			</form>
+		</div>
+		<div class="linkbox">
+			<h5>Already Registered? <a href="Login.html">Sign In</a></h5>
+		</div>
+	</body>
 </html>
 
 <!--
@@ -16,7 +32,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Resgister</title>
-		<link href="../css/auth.css" type="text/css" rel="stylesheet">
+		<link href="../../static/testauth/css/auth.css" type="text/css" rel="stylesheet">
 		<link rel="icon" type="image/x-icon" href="../Assets/bitsore3.png"/>
 	</head>
 
