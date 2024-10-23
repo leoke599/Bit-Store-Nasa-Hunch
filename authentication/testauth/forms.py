@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 from django import forms
 
-from django.forms.widget import PasswordInput, TextInput
+from django.forms.widgets import PasswordInput, TextInput
 
 
 # - creates/registers a user (model form)
