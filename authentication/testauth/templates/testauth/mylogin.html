@@ -1,6 +1,14 @@
 {% load static %}
 <html>
-    <link href="../../static/testauth/css/auth.css" type="text/css" rel="stylesheet">
-    <h1>login</h1>
+    <h1>Login now</h1>
+
+    <form method="POST" autocomplete="off">
+
+    {% csrf_token %}
+
+    {{loginform.as_p}}
+    <input type="submit" value="Login"/>
+    
+    </form>
 
 </html>
