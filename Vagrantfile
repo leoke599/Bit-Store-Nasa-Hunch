@@ -75,6 +75,6 @@ Vagrant.configure("2") do |config|
     apt-get install -y apache2
     apt-get install -y pip
     apt-get install -y python
-    apt-get install -y django
+    apt-get install -y django venv
   SHELL
 end
