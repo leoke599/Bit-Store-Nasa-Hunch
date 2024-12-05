@@ -77,15 +77,16 @@ Vagrant.configure("2") do |config|
     apt-get install -y python3-pip 
     apt-get install -y python3.8-venv 
     pip install pipenv 
-    python3 -m venv ~/env -ensurepip 
-    ~/djan source env/bin/activate
+    #python3 -m venv ~/env -ensurepip 
+    #~/djan source env/bin/activate
     pip install django
     #apt-get install -y python3-django 
     
-
+    
   SHELL
 end
 
 #~/dir source env/bin/activate
 #~/dir/authest python manage.py runserver 192.168.33.10
 #cd /vagrant 
+#runuser --user vagrant -- bash -lic 'echo $-'
