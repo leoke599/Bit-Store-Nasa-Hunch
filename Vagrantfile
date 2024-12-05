@@ -58,10 +58,10 @@ Vagrant.configure("2") do |config|
   #
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
-    vb.gui = true
   
     # Customize the amount of memory on the VM:
     vb.memory = "2048"
+    vb.name = "Bit-store"
   end
   #
   # View the documentation for the provider you are using for more
@@ -72,9 +72,20 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
-    apt-get install -y apache2
-    apt-get install -y pip
-    apt-get install -y python
-    apt-get install -y django venv
+    apt-get install -y apache2 
+    apt-get install -y python3 
+    apt-get install -y python3-pip 
+    apt-get install -y python3.8-venv 
+    pip install pipenv 
+    python3 -m venv ~/env -ensurepip 
+    ~/djan source env/bin/activate
+    pip install django
+    #apt-get install -y python3-django 
+    
+
   SHELL
 end
+
+#~/dir source env/bin/activate
+#~/dir/authest python manage.py runserver 192.168.33.10
+#cd /vagrant 
