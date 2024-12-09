@@ -6,8 +6,6 @@
 	</head>
 
 	<body>
-<<<<<<< HEAD
-=======
 		<p>Not coded yet</p>
 		<?
 			
@@ -16,6 +14,5 @@
 		
 		?>
 		
->>>>>>> 93ef177df9d5c1b60f03d4ebf4fa4bbadc2a78fb
 	</body>
 </html>
